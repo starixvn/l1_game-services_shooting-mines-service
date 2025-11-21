@@ -7,11 +7,11 @@
         "integration-test": "jest --config ./jest.integration-test.config.cjs --testPathPattern=tests/integration-tests/ --ci --forceExit --runInBand",
         "test": "jest --testPathPattern=src/ ",
         "test-coverage": "jest --testPathPattern=src/ --collect-coverage",
-        "debug": "set APP_NAME=coinmining_service && nodemon --es-module-specifier-resolution=node --watch ./ --inspect ./src/app.js",
-        "dev": "set APP_NAME=chicken_road_service && nodemon --es-module-specifier-resolution=node ./src/app.js",
-        "prod": "node --es-module-specifier-resolution=node ./src/app.js",
+        "debug": "set APP_NAME=coinmining_service && nodemon --exec tsx ./src/app.js",
+        "dev": "set APP_NAME=chicken_road_service && nodemon --exec tsx ./src/app.js",
+        "prod": "tsx ./src/app.js",
         "reg": "npm set registry http://npm.lumigame.com",
-        "stats": "nodemon --es-module-specifier-resolution=node --watch ./tests ./tests/rtp/index.js"
+        "stats": "nodemon --exec tsx ./tests/rtp/index.js"
     },
     "jestSonar": {
         "reportPath": "reports",
@@ -43,7 +43,8 @@
         "jest-sonar-reporter": "^2.0.0",
         "nodemon": "^2.0.4",
         "sc-game-management-client": "0.1.5",
-        "sc-game-service-integration-utils": "^2.1.0"
+        "sc-game-service-integration-utils": "^2.1.0",
+        "tsx": "^4.20.6"
     },
     "resolutions": {
         "sc-game-base": "5.5.0",
