@@ -5,7 +5,7 @@ export default {
     // proxy: "https://l2-proxy.lumigame.com",
     system: "SC1",
     owUrl: "https://l1-ows3.lumigame.com/SabaClub",
-    simulatorUrl: "https://l1-glbs3.lumigame.com",
+    simulatorUrl: "https://l2-glbs1.lumigame.com",
     proxy: "https://l1-proxy3.lumigame.com",
     gameInfo: {
         gameNames: ["Spaceflight"],
